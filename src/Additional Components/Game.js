@@ -32,6 +32,10 @@ export default function Game() {
         setCurrentMove(nextMove);
     }
 
+    function switchSort() {
+        history.reverse();
+    }
+
     return (
         <div className="game">
             <div className="game-board">
@@ -42,9 +46,9 @@ export default function Game() {
             </div>
             <div className="game-info">
                 <div>{CurrentMove}</div>
+                <button className="button" onClick={switchSort}>Switch Sort</button>
                 <ol>{moves}</ol>
             </div>
         </div>
     );
-
 }
